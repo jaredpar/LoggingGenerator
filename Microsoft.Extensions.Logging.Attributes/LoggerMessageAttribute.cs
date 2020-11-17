@@ -1,6 +1,6 @@
 ﻿// © Microsoft Corporation. All rights reserved.
 
-namespace R9Logging
+namespace Microsoft.Extensions.Logging.Attributes
 {
     using System;
     using Microsoft.Extensions.Logging;
