@@ -13,7 +13,7 @@
 // Use is pretty simple. A service developer creates an interface type which lists all of the log messages that the assembly can produce.
 // Once this is done, a new type is generated automatically which the developer uses to interactively with an ILogger instance. 
 //
-// This Microsoft.Extensions.Logging.Generator project uses C# 9.0 source generators. This is magic voodoo invoked at compile time. This code is
+// This Microsoft.Extensions.Logging.Generators project uses C# 9.0 source generators. This is magic voodoo invoked at compile time. This code is
 // responsible for finding types annotated with the [LoggerExtensions] attribute and automatically generating the strongly-typed
 // logging methods.
 //
@@ -30,7 +30,6 @@
 namespace Example
 {
     using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Logging.Attributes;
     using Microsoft.Extensions.Logging.Debug;
 
     // interface defined by each assembly listing all the logger messages the assembly produces

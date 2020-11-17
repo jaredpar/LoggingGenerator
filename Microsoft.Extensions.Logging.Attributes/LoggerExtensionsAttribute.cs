@@ -1,6 +1,6 @@
 ﻿// © Microsoft Corporation. All rights reserved.
 
-namespace Microsoft.Extensions.Logging.Attributes
+namespace Microsoft.Extensions.Logging
 {
     using System;
     
