@@ -22,8 +22,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="..\R9LoggingGenerator\R9LoggingGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-    <ProjectReference Include="..\R9Logging\R9Logging.csproj" />
+    <ProjectReference Include="..\R9LoggingGenerator\Microsoft.Extensions.Logging.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\R9Logging\Microsoft.Extensions.Logging.Attributes.csproj" />
   </ItemGroup>
 
 </Project>
