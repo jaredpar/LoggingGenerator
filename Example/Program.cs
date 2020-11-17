@@ -23,8 +23,6 @@
 //    * Ensure that logging methods return void
 //    * Finish implementation of exception support
 //    * Transpose doc comments from source interface to the generated type to improve IntelliSense experience.
-//    * Enforce that two logging methods don't have the same event id
-//    * Change namespaces and assembly names for inclusion in .NET
 //    * Add nuget packaging voodoo
 
 namespace Example
@@ -32,7 +30,7 @@ namespace Example
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Logging.Debug;
 
-    // interface defined by each assembly listing all the logger messages the assembly produces
+    // interface listing all the logger messages the assembly produces
     [LoggerExtensions]
     interface ILoggerExtensions
     {
@@ -40,14 +38,14 @@ namespace Example
         void CouldNotOpenSocket(string hostName);
     }
 
-    /* Here is an example of the code generated from the above
+    /* Here is the code generated for the above
 
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using Microsoft.Extensions.Logging;
 
-    namespace LoggingExample
+    namespace Example
     {
         static class LoggerExtensions
         {
@@ -118,10 +116,10 @@ namespace Example
             using var provider = new DebugLoggerProvider();
             var logger = provider.CreateLogger("LoggingExample");
 
-            // Approach #1: Extension method
+            // Approach #1: Extension method on ILogger
             logger.CouldNotOpenSocket("microsoft.com");
 
-            // Approach #2: wrapper Type
+            // Approach #2: wrapper type around ILogger
             var d = logger.Wrap();
             d.CouldNotOpenSocket("microsoft.com");
         }
